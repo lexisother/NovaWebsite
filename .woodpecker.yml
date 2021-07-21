@@ -17,7 +17,6 @@ pipeline:
             - curl https://nova-vps.ml/~alyxia/static/config -o ~/.ssh/config
             - echo "$SSH_KEY" > ~/.ssh/id_rsa
             - chmod 400 ~/.ssh/id_rsa
-            - ssh -o StrictHostKeyChecking=no vps 'echo'
-            - scp -r public vps:/var/www/html
+            - scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r public/* vps:/var/www/html
         secrets: [ssh_key]
 
