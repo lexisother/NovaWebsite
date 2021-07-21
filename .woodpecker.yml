@@ -1,7 +1,23 @@
 pipeline:
-  frontend:
-    image: node
-    commands:
-      - npm install
-      - npm run lint
-      - npm run build
+    build:
+        image: node:latest
+        pull: true
+        commands:
+            - npm install
+            - npm run lint
+            - npm run build
+
+    deploy:
+        image: debian:latest
+        pull: true
+        commands:
+            - apt update
+            - apt install -y curl openssh-client sshpass
+            - mkdir ~/.ssh
+            - curl https://nova-vps.ml/~alyxia/static/config -o ~/.ssh/config
+            - echo "$SSH_KEY" > ~/.ssh/id_rsa
+            - chmod 400 ~/.ssh/id_rsa
+            - ssh -o StrictHostKeyChecking=no vps 'echo'
+            - scp -r public vps:/var/www/html
+        secrets: [ssh_key]
+
