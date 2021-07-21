@@ -1,0 +1,7 @@
+pipeline:
+  frontend:
+    image: node
+    commands:
+      - npm install
+      - npm run lint
+      - npm run build
