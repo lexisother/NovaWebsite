@@ -9,6 +9,24 @@ export default function HomePage(): JSX.Element {
             </div>
             <div className="content">
                 <p>Yes.</p>
+                <div className="grid">
+                    <div className="gridItem">
+                        <div className="gridItemHeader">Item1</div>
+                        <div className="gridItemText">desc</div>
+                    </div>
+                    <div className="gridItem">
+                        <div className="gridItemHeader">Item2</div>
+                        <div className="gridItemText">desc</div>
+                    </div>
+                    <div className="gridItem">
+                        <div className="gridItemHeader">Item3</div>
+                        <div className="gridItemText">desc</div>
+                    </div>
+                    <div className="gridItem">
+                        <div className="gridItemHeader">Item4</div>
+                        <div className="gridItemText">desc</div>
+                    </div>
+                </div>
             </div>
         </Page>
     );
