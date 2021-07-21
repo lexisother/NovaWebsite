@@ -8,7 +8,7 @@ interface MetaProps {
     keywords?: string[];
     imageUrl?: string;
 }
-function Meta ({title, description, keywords}: MetaProps): JSX.Element {
+function Meta({title, description, keywords}: MetaProps): JSX.Element {
     const defaults = {
         title: "Nova",
         description: "Nova website"
@@ -47,7 +47,7 @@ interface PageProps extends MetaProps {
 }
 const Page = ({children, ...props}: PageProps): JSX.Element => {
     return (
-        <div>
+        <div className="page-container">
             <Meta {...props} />
 
             <main>{children}</main>

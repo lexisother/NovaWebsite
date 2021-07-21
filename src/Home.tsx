@@ -1,10 +1,15 @@
-import React from 'react';
-import Page from './shared/Page';
+import React from "react";
+import Page from "./shared/Page";
 
 export default function HomePage(): JSX.Element {
     return (
         <Page>
-            <h1>hi</h1>
+            <div className="header">
+                <h1>Nova</h1>
+            </div>
+            <div className="content">
+                <p>Yes.</p>
+            </div>
         </Page>
-    )
+    );
 }
