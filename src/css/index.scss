@@ -88,7 +88,6 @@ a {
 // }}}
 // }}}
 
-// Homepage {{{
 // Grid {{{
 @media only screen and (max-width: 770px) {
     .grid {
@@ -109,6 +108,9 @@ a {
             margin-top: 20px;
             margin-bottom: -10px;
 
+            img {
+                border-radius: 50%;
+            }
             p {
                 margin-top: 0;
             }
@@ -120,5 +122,4 @@ a {
         }
     }
 }
-// }}}
 // }}}

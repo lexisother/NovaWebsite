@@ -54,6 +54,9 @@ function Navigation(): JSX.Element {
                 <Link className="navbar-link" activeClassName="navbar-link--active" activeExact href="/">
                     Home
                 </Link>
+                <Link className="navbar-link" activeClassName="navbar-link--active" activeExact href="/members">
+                    Members
+                </Link>
             </div>
         </nav>
     );
