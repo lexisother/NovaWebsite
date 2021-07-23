@@ -32,7 +32,10 @@ export default function MembersPage(): JSX.Element {
                             <img src="https://nova-vps.ml/~alyxia/static/img/keanucode.png" height="120px" />
                             <p>Keanu</p>
                         </div>
-                        <div className="gridItemText"></div>
+                        <div className="gridItemText">
+                            <p>I'm Keanu. I do things from time to time.</p>
+                            <p>I am usually just a ghost.</p>
+                        </div>
                     </div>
                 </div>
             </div>
