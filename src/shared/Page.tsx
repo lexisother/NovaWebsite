@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Link from "./Link";
 import "../css/index.scss";
 
 interface MetaProps {
@@ -42,6 +43,22 @@ function Meta({title, description, keywords}: MetaProps): JSX.Element {
     );
 }
 
+function Navigation(): JSX.Element {
+    return (
+        <nav className="navbar">
+            <div className="navbar-logo">
+                <img className="navbar-image" src="https://git.nova-vps.ml/assets/img/logo.png" height="60rem" />
+            </div>
+
+            <div className="navbar-links">
+                <Link className="navbar-link" activeClassName="navbar-link--active" activeExact href="/">
+                    Home
+                </Link>
+            </div>
+        </nav>
+    );
+}
+
 interface PageProps extends MetaProps {
     children: React.ReactNode;
 }
@@ -49,6 +66,7 @@ const Page = ({children, ...props}: PageProps): JSX.Element => {
     return (
         <div className="page-container">
             <Meta {...props} />
+            <Navigation />
 
             <main>{children}</main>
         </div>

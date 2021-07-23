@@ -5,7 +5,7 @@ interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
     href: string;
     target?: string;
     activeClassName?: string;
-    activeExact?: string;
+    activeExact?: boolean;
 }
 
 export default function Link({

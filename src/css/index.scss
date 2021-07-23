@@ -42,6 +42,7 @@ a {
     .header {
         font-size: 30px;
         text-align: center;
+        margin-top: -20px;
         margin-bottom: -20px;
     }
     .content {
@@ -49,6 +50,42 @@ a {
         text-align: center;
     }
 }
+
+// Navbar {{{
+.navbar {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    background-color: #474d61;
+    border-radius: 6px;
+
+    .navbar-logo {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-top: 0.25rem;
+
+        .navbar-image {
+            border-radius: 6px;
+        }
+    }
+    .navbar-links {
+        flex-grow: 1;
+
+        .navbar-link {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 1.25rem;
+            color: initial;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #5d6580;
+                text-decoration: none;
+            }
+        }
+    }
+}
+// }}}
 // }}}
 
 // Homepage {{{
