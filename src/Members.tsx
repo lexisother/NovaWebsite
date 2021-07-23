@@ -25,7 +25,16 @@ export default function MembersPage(): JSX.Element {
                             <img src="https://nova-vps.ml/~alyxia/static/img/Hades785.png" height="120px" />
                             <p>Loïc</p>
                         </div>
-                        <div className="gridItemText"></div>
+                        <div className="gridItemText">
+                            <p>
+                                Hey, Loïc here, aka Fuzuki, aka Hades785. I'm a 22 years old software, web and game
+                                developer.
+                            </p>
+                            <p>
+                                Nova started for me when Alyxia wanted to make a Discord bot with me. A lot of things
+                                happened, and now we're here, all cozy on my VPS.
+                            </p>
+                        </div>
                     </div>
                     <div className="gridItem">
                         <div className="gridItemHeader">
