@@ -10,5 +10,12 @@ function resolvePlugin(plugin, options) {
  */
 module.exports = {
     flags: {PRESERVE_WEBPACK_CACHE: true},
-    plugins: [resolvePlugin("gatsby-plugin-react-helmet")]
+    plugins: [
+        resolvePlugin("gatsby-plugin-react-helmet"),
+        resolvePlugin("gatsby-plugin-sass", {
+            sassOptions: {
+                includePaths: ["src/css"]
+            }
+        })
+    ]
 };

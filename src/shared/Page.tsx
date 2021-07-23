@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import "../css/index.css";
+import "../css/index.scss";
 
 interface MetaProps {
     title?: string;
