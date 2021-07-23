@@ -17,6 +17,20 @@ body {
     overflow-wrap: break-word;
 }
 
+a {
+    color: #3273dc;
+    text-decoration: none;
+
+    &:visited {
+        color: #3273dc;
+    }
+    &:hover {
+        text-decoration: underline;
+        -webkit-text-decoration-style: dotted;
+        text-decoration-style: dotted;
+    }
+}
+
 .page-container {
     max-width: 920px;
     padding: 0 1rem 2rem 1rem;
