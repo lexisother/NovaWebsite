@@ -1,0 +1,27 @@
+---
+kind: pipeline
+type: docker
+name: Build & Deploy
+
+steps:
+    - name: Build
+      image: node:latest
+      commands:
+          - npm install
+          - npm run lint
+          - npm run build
+
+    - name: Deploy
+      image: debian:latest
+      environment:
+          SSH_KEY:
+              from_secret: SSH_KEY
+      commands:
+          - apt update
+          - apt install -y curl openssh-client
+          - mkdir ~/.ssh
+          - curl https://nova-vps.ml/~alyxia/static/config -o ~/.ssh/config
+          - echo "$SSH_KEY" > ~/.ssh/id_rsa
+          - chmod 400 ~/.ssh/id_rsa
+          - ssh -o StrictHostKeyChecking=no vps 'cd /var/www/html; rm -rf ./*'
+          - scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r public/* vps:/var/www/html
